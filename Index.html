@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dev Services by John Doe</title>
+    <meta name="description" content="John Doe - Front-End Developer creating beautiful and functional websites for small businesses. Contact me for your web development needs!">
+    <meta name="keywords" content="web development, front-end developer, small business websites, e-commerce, website, local business ,John Throneberry">
+    <meta name="author" content="John Doe">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="about-me">
+        <h2>John Throneberry</h2>
+        <p>Front-End Developer</p>
+        <p>Creating beautiful and functional websites for small businesses. Let's chat about your project!</p>
+    </div>
+    <div class="chat-container">
+        <div class="chat-section" id="chat-section">
+            <div class="message received">
+                <p>Hello, I would like a website for my business</p>
+            </div>
+						<span class="time">10:15 AM</span>
+            <div class="message sent">
+                <p>Hi there! I'd love to help. A website is an incredibly powerful tool that helps to generate leads, promote your social medias, and even give you a space to sell your products.</p>
+            </div>
+						<span class="time">10:16 AM</span>
+            <div class="message received">
+                <p>Awesome, I definitely need that. How do we get started?</p>
+            </div>
+						<span class="time">10:17 AM</span>
+            <div class="message sent">
+                <p>Great! Just click in the message block below and fill out your information!</p>
+            </div>
+						<span class="time">10:18 AM</span>
+        </div>
+        <div class="input-container" onclick="openContactForm()">
+            <input type="text" id="message-input" placeholder="Type a message..." readonly>
+        </div>
+    </div>
+
+    <div id="contact-form" class="contact-form hidden">
+        <h2>Contact Me</h2>
+        <form id="contact-form-element" onsubmit="sendMessage(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send</button>
+            <button type="button" onclick="closeContactForm()">Cancel</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
