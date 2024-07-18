@@ -13,14 +13,14 @@ body {
 
 .about-me {
     text-align: center;
-    padding: 0px;
+    padding: 20px;
     background-color: #fff;
     width: 90%; /* Responsive width */
     max-width: 375px;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    margin-top: -15px;
+    vertical-align: top;
 }
 
 .chat-container {
