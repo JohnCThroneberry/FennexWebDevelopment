@@ -8,7 +8,7 @@ body {
     align-items: center;
     height: 100vh;
     justify-content: center;
-    overflow: hidden; /* Prevents page scrolling on small screens */
+    /*overflow: hidden; /* Prevents page scrolling on small screens */
 }
 
 .about-me {
@@ -33,7 +33,7 @@ body {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .chat-section {
