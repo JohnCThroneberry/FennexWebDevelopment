@@ -20,7 +20,7 @@ body {
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    margin-too: -20px;
+    margin-top: -20px;
 }
 
 .chat-container {
