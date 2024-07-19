@@ -12,7 +12,8 @@ function closeContactForm() {
 
 function sendMessage(event) {
     event.preventDefault();
-    
+
+    const form = event.target;
     const chatSection = document.getElementById('chat-section');
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
@@ -43,4 +44,14 @@ function sendMessage(event) {
     chatSection.scrollTop = chatSection.scrollHeight; // Scroll to the bottom
     
     closeContactForm();
+    const formData = new FormData(form);
+		fetch('/', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			body: new URLSearchParams(formData).toString()
+				}).then(() => {
+						console.log('Form successfully submitted');
+				}).catch((error) => {
+						console.error('Error submitting form:', error);
+				});
 }
