@@ -91,3 +91,23 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('contact-form-element').addEventListener('submit', sendMessage);
     document.querySelector('.input-container').addEventListener('click', openContactForm);
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const messages = document.querySelectorAll('.message.received, .message.sent');
+    const timestampElements = document.querySelectorAll('.time[data-timestamp]');
+
+    // Initialize timestamp increment (e.g., starting from page load time)
+    let currentTime = new Date();
+
+    // Update existing message timestamps
+    timestampElements.forEach((timestampElement, index) => {
+        // Calculate timestamp for each message
+        let messageTime = new Date(currentTime);
+        messageTime.setMinutes(messageTime.getMinutes() - (messages.length - index - 1)); // Adjust timestamp for each message
+
+        // Format timestamp as HH:mm AM/PM
+        let formattedTime = messageTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+        // Update timestamp content
+        timestampElement.textContent = formattedTime;
+    });
+});
