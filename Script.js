@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.fillStyle = 'rgba(229, 221, 213, 0.05)';  // Slightly transparent background to create a fading effect
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-        ctx.fillStyle = 'rgba(153, 153, 153, 0.7)'; // Slightly darker color than the background
+        ctx.fillStyle = 'rgba(153, 153, 153, 0.2)'; // Slightly darker color than the background
         ctx.font = fontSize + 'px monospace';
 
         drops.forEach((y, x) => {
