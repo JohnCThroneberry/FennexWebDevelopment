@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.fillStyle = 'rgba(229, 221, 213, 0.05)';  // Slightly transparent background to create a fading effect
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-        ctx.fillStyle = 'rgba(150, 150, 150, 0.2)'; // Slightly darker color than the background
+        ctx.fillStyle = 'rgba(150, 150, 150, 0.25)'; // Slightly darker color than the background
         ctx.font = fontSize + 'px monospace';
 
         drops.forEach((y, x) => {
@@ -32,15 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     setInterval(draw, 50);
-
-    // Existing JavaScript functionality
-    function openContactForm() {
-        document.getElementById('contact-form').classList.remove('hidden');
-    }
-
-    function closeContactForm() {
-        document.getElementById('contact-form').classList.add('hidden');
-    }
+		
+    document.querySelector('.input-container').addEventListener('click', openContactForm);
+});
 
     function sendMessage(event) {
         event.preventDefault();
@@ -88,9 +82,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    document.getElementById('contact-form-element').addEventListener('submit', sendMessage);
-    document.querySelector('.input-container').addEventListener('click', openContactForm);
-});
+function openContactForm() {
+        document.getElementById('contact-form').classList.remove('hidden');
+    }
+function closeContactForm() {
+        document.getElementById('contact-form').classList.add('hidden');
+    }
+		
 document.addEventListener('DOMContentLoaded', function() {
     const messages = document.querySelectorAll('.message.received, .message.sent');
     const timestampElements = document.querySelectorAll('.time[data-timestamp]');
