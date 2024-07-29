@@ -8,7 +8,7 @@ body {
     align-items: center;
     height: 100vh;
     justify-content: center;
-    overflow: hidden; /* Prevents page scrolling on small screens */
+    /*overflow: hidden; /* Prevents page scrolling on small screens */
     position: relative;
 }
 
